@@ -25,8 +25,11 @@ a) **Otvaranje Windows terminal aplikaciju**
 ![Untitled](Vjezba01/Untitled.png)
 
 Windows PowerShell
+
 Copyright (C) Microsoft Corporation. All rights reserved.
+
 Install the latest PowerShell for new features and improvements! [https://aka.ms/PSWindows](https://aka.ms/PSWindows)
+
 PS C:\Users\mateo>
 
 b) **Pozicioniranje na željeni direktorij (npr. *Desktop*)**
@@ -44,12 +47,19 @@ git clone https://github.com/mcagalj/CNS-2020-21.git
 ```
 
 C:\Users\mateo\Desktop> git clone [https://github.com/mcagalj/CNS-2020-21.git](https://github.com/mcagalj/CNS-2020-21.git)
+
 Cloning into 'CNS-2020-21'...
+
 remote: Enumerating objects: 322, done.
+
 remote: Counting objects: 100% (322/322), done.
+
 remote: Compressing objects: 100% (271/271), done.
+
 remote: Total 322 (delta 55), reused 298 (delta 34), pack-reused 0
+
 Receiving objects: 100% (322/322), 2.27 MiB | 2.80 MiB/s, done.
+
 Resolving deltas: 100% (55/55), done.
 
 ### 2. Korak
@@ -86,6 +96,7 @@ sed -i -e 's/\r$//' stop.sh
 **Ili problem:**
 
 The command 'docker' could not be found in this WSL 2 distro.
+
 We recommend to activate the WSL integration in Docker Desktop settings.
 
 **Potrebno je upaliti Docker aplikaciju ili je resetirati ukoliko je upaljena, pri čemu je omogućena integracija sa Ubuntu u postavkama:**
@@ -105,39 +116,75 @@ a) **Pokretanje virtualnog mrežnog scenarija**
 ```
 
 No running containers to stop.
+
 Removing existing containers, networks, images ...
+
 station-1
+
 station-2
+
 evil-station
+
 cns-lab
+
 Untagged: cns/station:ver1.0
+
 Deleted: sha256:23d2f793e9470d849039c15fe358a3997b6de0238d42ee3283ba05996a2b0bdc
+
 Building a new image cns/station:ver1.0 ...
+
 station-2 uses an image, skipping
+
 evil-station uses an image, skipping
+
 Building station-1
+
 [+] Building 0.1s (11/11) FINISHED
+
 => [internal] load build definition from Dockerfile                                                               0.1s
+
 => => transferring dockerfile: 32B                                                                                       0.0s
+
 => [internal] load .dockerignore                                                                                           0.0s
+
 => => transferring context: 2B                                                                                             0.0s
+
 => [internal] load metadata for [docker.io/library/ubuntu:latest](http://docker.io/library/ubuntu:latest)                                          0.0s
+
 => [1/7] FROM [docker.io/library/ubuntu](http://docker.io/library/ubuntu)                                                                              0.0s
+
 => CACHED [2/7] RUN apt-get -y update                                                                            0.0s
+
 => CACHED [3/7] RUN apt-get install -y iputils-ping                                                           0.0s
+
 => CACHED [4/7] RUN apt-get install -y net-tools                                                               0.0s
+
 => CACHED [5/7] RUN apt-get install -y dsniff                                                                     0.0s
+
 => CACHED [6/7] RUN apt-get install -y tcpdump                                                               0.0s
+
 => CACHED [7/7] RUN apt-get install -y netcat                                                                    0.0s
+
 => exporting to image                                                                                                           0.0s
+
 => => exporting layers                                                                                                          0.0s
-=> => writing image sha256:23d2f793e9470d849039c15fe358a3997b6de0238d42ee3283ba05996a2b0bdc       0.0s
+
+=> => writing image
+
+sha256:23d2f793e9470d849039c15fe358a3997b6de0238d42ee3283ba05996a2b0bdc       0.0s
+
 => => naming to [docker.io/cns/station:ver1.0](http://docker.io/cns/station:ver1.0)                                                                      0.0s
+
 Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+
 Creating and starting containers ...
+
 Creating network "cns-lab" with the default driver
+
 Creating station-1 ... done
+
 Creating evil-station ... done
+
 Creating station-2    ... done
 
 b) **Izlist pokrenutih kontejnera**
@@ -147,8 +194,11 @@ docker ps
 ```
 
 CONTAINER ID   IMAGE                COMMAND   CREATED         STATUS         PORTS     NAMES
+
 852b00124f99   cns/station:ver1.0   "bash"    2 minutes ago   Up 2 minutes             evil-station
+
 af9209946916   cns/station:ver1.0   "bash"    2 minutes ago   Up 2 minutes              station-2
+
 5b655015449c   cns/station:ver1.0   "bash"    2 minutes ago   Up 2 minutes             station-1
 
 c) **Pokretanje interaktivnog shella u `station-1` kontejneru**
@@ -166,11 +216,17 @@ ifconfig -a
 ```
 
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+
                  inet 172.18.0.2  netmask 255.255.0.0  broadcast 172.18.255.255
+
                  ether 02:42:ac:12:00:02  txqueuelen 0  (Ethernet)
+
                  RX packets 18  bytes 1532 (1.5 KB)
+
                  RX errors 0  dropped 0  overruns 0  frame 0
+
                  TX packets 0  bytes 0 (0.0 B)
+
                  TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 **Dobivene informacije:**
@@ -185,7 +241,9 @@ ping station-2
 ```
 
 PING station-2 (172.18.0.3) 56(84) bytes of data.
+
 64 bytes from station-2.cns-lab (172.18.0.3): icmp_seq=1 ttl=64 time=0.420 ms
+
 64 bytes from station-2.cns-lab (172.18.0.3): icmp_seq=2 ttl=64 time=0.142 ms
 
 ### 4. Korak
@@ -293,6 +351,9 @@ b) **Zaustavljanje virtualiziranog mrežnog scenarija**
 ```
 
 Stoping running containers:
+
 852b00124f99
+
 af9209946916
+
 5b655015449c
