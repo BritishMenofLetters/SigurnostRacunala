@@ -22,13 +22,11 @@ Realizirati *man in the middle* napad iskorištavanjem ranjivosti ARP protokol
 
 a) **Otvaranje Windows terminal aplikaciju**
 
-[Windows Terminal Icon.jfif](Sigurnost%20Rac%CC%8Cunala%20i%20Podataka%205e50066b481d462ba4fa1924b0b48f6f/Windows_Terminal_Icon.jfif)
+![Untitled](Vjezba01\Untitled.png)
 
 Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
-
 Install the latest PowerShell for new features and improvements! [https://aka.ms/PSWindows](https://aka.ms/PSWindows)
-
 PS C:\Users\mateo>
 
 b) **Pozicioniranje na željeni direktorij (npr. *Desktop*)**
@@ -58,9 +56,9 @@ Resolving deltas: 100% (55/55), done.
 
 a) **Otvaranje Ubuntu terminal na WSL sustavu**
 
-![Untitled](Sigurnost%20Rac%CC%8Cunala%20i%20Podataka%205e50066b481d462ba4fa1924b0b48f6f/Untitled.png)
+![Untitled](Vjezba01\Untitled 1.png)
 
-![Untitled](Sigurnost%20Rac%CC%8Cunala%20i%20Podataka%205e50066b481d462ba4fa1924b0b48f6f/Untitled%201.png)
+![Untitled](Vjezba01\Untitled 2.png)
 
 b) **Pozicioniranje na radni direktorij**
 
@@ -135,7 +133,6 @@ Building station-1
 => => exporting layers                                                                                                          0.0s
 => => writing image sha256:23d2f793e9470d849039c15fe358a3997b6de0238d42ee3283ba05996a2b0bdc       0.0s
 => => naming to [docker.io/cns/station:ver1.0](http://docker.io/cns/station:ver1.0)                                                                      0.0s
-
 Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
 Creating and starting containers ...
 Creating network "cns-lab" with the default driver
@@ -195,7 +192,7 @@ PING station-2 (172.18.0.3) 56(84) bytes of data.
 
 a) **Ponoviti korak 2 (dva puta) gjde se pri tom koristi "Alt" + "Lijevi klik miša" za otvaranje dodatnih Ubuntu terminala**
 
-![Untitled](Sigurnost%20Rac%CC%8Cunala%20i%20Podataka%205e50066b481d462ba4fa1924b0b48f6f/Untitled%202.png)
+![Untitled](Vjezba01\Untitled 3.png)
 
 b) **U novootvorenim treminalima pokrenuti interaktivni shell u `station-2` kontejneru, odnosno interaktivni shell u `evil-station` kontejneru**
 
@@ -207,7 +204,7 @@ docker exec -it station-2 bash
 docker exec -it evil-station bash
 ```
 
-![Untitled](Sigurnost%20Rac%CC%8Cunala%20i%20Podataka%205e50066b481d462ba4fa1924b0b48f6f/Untitled%203.png)
+![Untitled](Vjezba01\Untitled 4.png)
 
 c) **Dohvaćanje konfiguracije mrežnog interfejsa `station-2`, odnosno `evil-station` (korak 3e)**
 
@@ -247,7 +244,7 @@ arpspoof -t station-1 station-2
 
 b) **Otvaranje dodatnog Ubunutu terminala (kao korak 4a i 4b) za `evil-station`**
 
-![Untitled](Sigurnost%20Rac%CC%8Cunala%20i%20Podataka%205e50066b481d462ba4fa1924b0b48f6f/Untitled%204.png)
+![Untitled](Vjezba01\Untitled 5.png)
 
 c) **Pokrećemo tcpdump u kontejneru `evil-station` i pratimo promet (novi terminal)**
 
@@ -255,7 +252,7 @@ c) **Pokrećemo tcpdump u kontejneru `evil-station` i pratimo promet (novi termi
 tcpdump
 ```
 
-![Untitled](Sigurnost%20Rac%CC%8Cunala%20i%20Podataka%205e50066b481d462ba4fa1924b0b48f6f/Untitled%205.png)
+![Untitled](Vjezba01\Untitled 6.png)
 
 c) **Za filtiranje podatka, odnosno zanemarivanje paketa stvorenog od `evil-station`**
 
@@ -263,7 +260,7 @@ c) **Za filtiranje podatka, odnosno zanemarivanje paketa stvorenog od `evil-stat
 tcpdump tcp
 ```
 
-![Untitled](Sigurnost%20Rac%CC%8Cunala%20i%20Podataka%205e50066b481d462ba4fa1924b0b48f6f/Untitled%206.png)
+![Untitled](Vjezba01\Untitled 7.png)
 
 **Ili još za prikaz podataka u hex prikazu**
 
@@ -271,7 +268,7 @@ tcpdump tcp
 tcpdump tcp -X
 ```
 
-![Untitled](Sigurnost%20Rac%CC%8Cunala%20i%20Podataka%205e50066b481d462ba4fa1924b0b48f6f/Untitled%207.png)
+![Untitled](Vjezba01\Untitled 8.png)
 
 **Ili za gašenje prosljeđivanja spoofanih paketa**
 
@@ -279,7 +276,7 @@ tcpdump tcp -X
 echo 0 > /proc/sys/net/ipv4/ip_forward
 ```
 
-![Untitled](Sigurnost%20Rac%CC%8Cunala%20i%20Podataka%205e50066b481d462ba4fa1924b0b48f6f/Untitled%208.png)
+![Untitled](Vjezba01\Untitled 9.png)
 
 ### 7. Korak
 
