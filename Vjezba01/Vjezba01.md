@@ -22,7 +22,7 @@ Realizirati *man in the middle* napad iskorištavanjem ranjivosti ARP protokol
 
 a) **Otvaranje Windows terminal aplikaciju**
 
-![Untitled](Vjezba01\Untitled.png)
+![Untitled](Vjezba01/Untitled.png)
 
 Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
@@ -56,9 +56,9 @@ Resolving deltas: 100% (55/55), done.
 
 a) **Otvaranje Ubuntu terminal na WSL sustavu**
 
-![Untitled](Vjezba01\Untitled 1.png)
+![Untitled](Vjezba01/Untitled%201.png)
 
-![Untitled](Vjezba01\Untitled 2.png)
+![Untitled](Vjezba01/Untitled%202.png)
 
 b) **Pozicioniranje na radni direktorij**
 
@@ -192,7 +192,7 @@ PING station-2 (172.18.0.3) 56(84) bytes of data.
 
 a) **Ponoviti korak 2 (dva puta) gjde se pri tom koristi "Alt" + "Lijevi klik miša" za otvaranje dodatnih Ubuntu terminala**
 
-![Untitled](Vjezba01\Untitled 3.png)
+![Untitled](Vjezba01/Untitled%203.png)
 
 b) **U novootvorenim treminalima pokrenuti interaktivni shell u `station-2` kontejneru, odnosno interaktivni shell u `evil-station` kontejneru**
 
@@ -204,7 +204,7 @@ docker exec -it station-2 bash
 docker exec -it evil-station bash
 ```
 
-![Untitled](Vjezba01\Untitled 4.png)
+![Untitled](Vjezba01/Untitled%204.png)
 
 c) **Dohvaćanje konfiguracije mrežnog interfejsa `station-2`, odnosno `evil-station` (korak 3e)**
 
@@ -244,7 +244,7 @@ arpspoof -t station-1 station-2
 
 b) **Otvaranje dodatnog Ubunutu terminala (kao korak 4a i 4b) za `evil-station`**
 
-![Untitled](Vjezba01\Untitled 5.png)
+![Untitled](Vjezba01/Untitled%205.png)
 
 c) **Pokrećemo tcpdump u kontejneru `evil-station` i pratimo promet (novi terminal)**
 
@@ -252,7 +252,7 @@ c) **Pokrećemo tcpdump u kontejneru `evil-station` i pratimo promet (novi termi
 tcpdump
 ```
 
-![Untitled](Vjezba01\Untitled 6.png)
+![Untitled](Vjezba01/Untitled%206.png)
 
 c) **Za filtiranje podatka, odnosno zanemarivanje paketa stvorenog od `evil-station`**
 
@@ -260,7 +260,7 @@ c) **Za filtiranje podatka, odnosno zanemarivanje paketa stvorenog od `evil-stat
 tcpdump tcp
 ```
 
-![Untitled](Vjezba01\Untitled 7.png)
+![Untitled](Vjezba01/Untitled%207.png)
 
 **Ili još za prikaz podataka u hex prikazu**
 
@@ -268,7 +268,7 @@ tcpdump tcp
 tcpdump tcp -X
 ```
 
-![Untitled](Vjezba01\Untitled 8.png)
+![Untitled](Vjezba01/Untitled%208.png)
 
 **Ili za gašenje prosljeđivanja spoofanih paketa**
 
@@ -276,7 +276,7 @@ tcpdump tcp -X
 echo 0 > /proc/sys/net/ipv4/ip_forward
 ```
 
-![Untitled](Vjezba01\Untitled 9.png)
+![Untitled](Vjezba01/Untitled%209.png)
 
 ### 7. Korak
 
