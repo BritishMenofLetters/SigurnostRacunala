@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
 **Dobivena je hash vrijednost: *6f046a3737577dcf427a04990653776e844d9bba35fb82bd54a643f64d8bcf94* koja uistinu odgovara jednoj od ponuđenih datoteka na serveru.**
 
-**Na kraju se pokreće funkcija brute_force(), kôd u nastavku, da bi se saznao enkripcijski ključ maksimalne entropije 22 (2^22 ≈ 4 200 000 ključeva) i vidjelo da li je ta datoteka uistinu odgovarajuća personalizirana datoteka**
+**Na kraju se pokreće funkcija *brute_force()*, kôd u nastavku, da bi se saznao enkripcijski ključ maksimalne entropije 22 (2^22 ≈ 4 200 000 ključeva) i vidjelo da li je ta datoteka uistinu odgovarajuća personalizirana datoteka**
 
 ```python
 import base64
