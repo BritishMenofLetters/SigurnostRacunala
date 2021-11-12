@@ -119,6 +119,6 @@ if __name__ == "__main__":
     brute_force()
 ```
 
-`**brute_force`  funkcijom je dobijen ključ *AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcnsc=* i ujedno dekriptirana datoteka i spremljena pod imenom `BINGO.png`  čiji je sadržaj uistinu dokazuje uspješno dekriptirani personalizirani izazov (datoteku):**
+`brute_force`  **funkcijom je dobijen ključ *AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcnsc=* i ujedno dekriptirana datoteka i spremljena pod imenom `BINGO.png`  čiji je sadržaj uistinu dokazuje uspješno dekriptirani personalizirani izazov (datoteku):**
 
 ![BINGO.png](Img/BINGO.png)
