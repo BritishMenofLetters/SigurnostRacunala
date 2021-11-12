@@ -1,6 +1,6 @@
 # Sigurnost Računala i Podataka
 
-# 2**. Laboratorijska vježba**
+# 2. Laboratorijska vježba
 
 ### ***Symmetric key cryptography - a crypto challenge***
 
