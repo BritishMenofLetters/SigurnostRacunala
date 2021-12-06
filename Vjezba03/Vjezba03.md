@@ -117,10 +117,15 @@ if __name__ == "__main__":
 **Dobiven je output:**
 
 order_1.txt
+
 Message    Sell 84 shares of Tesla (2021-11-21T18:22) NOK
+
 order_2.txt
+
 Message     Buy 51 shares of Tesla (2021-11-18T18:51) OK
+
 order_3.txt
+
 Message     Buy 77 shares of Tesla (2021-11-15T20:00) NOK
 order_4.txt
 Message     Buy 10 shares of Tesla (2021-11-19T04:15) OK
