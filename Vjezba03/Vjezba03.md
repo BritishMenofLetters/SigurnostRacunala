@@ -117,7 +117,6 @@ if __name__ == "__main__":
 **Dobiven je output:**
 
 order_1.txt
-
 Message    Sell 84 shares of Tesla (2021-11-21T18:22) NOK
 
 order_2.txt
