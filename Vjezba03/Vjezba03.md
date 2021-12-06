@@ -1,6 +1,6 @@
 # Sigurnost Računala i Podataka
 
-# 3**. Laboratorijska vježba**
+# 3. Laboratorijska vježba
 
 ### ***Message authentication and integrity***
 
