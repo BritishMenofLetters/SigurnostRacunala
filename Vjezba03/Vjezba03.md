@@ -121,24 +121,29 @@ order_1.txt
 Message    Sell 84 shares of Tesla (2021-11-21T18:22) NOK
 
 order_2.txt
-
 Message     Buy 51 shares of Tesla (2021-11-18T18:51) OK
 
 order_3.txt
-
 Message     Buy 77 shares of Tesla (2021-11-15T20:00) NOK
+
 order_4.txt
 Message     Buy 10 shares of Tesla (2021-11-19T04:15) OK
+
 order_5.txt
 Message     Buy 22 shares of Tesla (2021-11-19T02:44) OK
+
 order_6.txt
 Message    Sell 83 shares of Tesla (2021-11-17T16:49) NOK
+
 order_7.txt
 Message      Buy 6 shares of Tesla (2021-11-16T05:26) OK
+
 order_8.txt
 Message    Sell 39 shares of Tesla (2021-11-15T21:00) NOK
+
 order_9.txt
 Message    Sell 89 shares of Tesla (2021-11-16T17:37) NOK
+
 order_10.txt
 Message    Sell 55 shares of Tesla (2021-11-22T09:02) NOK
 
